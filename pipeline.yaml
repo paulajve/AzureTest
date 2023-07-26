@@ -1,0 +1,14 @@
+trigger:
+      batch: true
+      branches:
+        - master
+
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.8'
+      - task: PythonPackage@0
+        inputs:
+          pythonPackageSource: 'src/factorial'
+          pythonPackageVersion: '1.0.0'
+          buildCommand: 'python setup.py build'
