@@ -1,1 +1,1 @@
-
+from .factorial import factorial
